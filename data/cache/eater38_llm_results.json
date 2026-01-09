@@ -1,0 +1,585 @@
+{
+  "restaurants": [
+    {
+      "name": "J. Hollinger's Waterman's Chophouse",
+      "description": "An Art Deco-styled American chophouse and raw bar in downtown Silver Spring from restaurateur Jerry Hollinger, celebrating local farmers, watermen, and purveyors with steaks, seafood add-ons, and happy-hour oyster deals.",
+      "cuisine_type": "American (Chophouse)",
+      "price_range": "$$",
+      "booking_website": "https://jhollingers.com/"
+    },
+    {
+      "name": "The Daily Dish",
+      "description": "Mentioned as one of Jerry Hollinger's ventures (a restaurant/catering company) associated with the Waterman\u2019s Chophouse team.",
+      "cuisine_type": "Catering / American",
+      "price_range": "",
+      "booking_website": ""
+    },
+    {
+      "name": "Dish & Dram",
+      "description": "A separate Hollinger hospitality project referenced alongside The Daily Dish and Waterman's Chophouse.",
+      "cuisine_type": "Bar / American",
+      "price_range": "",
+      "booking_website": ""
+    },
+    {
+      "name": "Aventino Cucina",
+      "description": "Mike Friedman's Roman/Lazio-inspired restaurant in Bethesda, serving airy pizza rossa, light salads, house-made pastas, and classic Roman dishes.",
+      "cuisine_type": "Italian (Roman)",
+      "price_range": "$$",
+      "booking_website": "https://aventinocucina.com/"
+    },
+    {
+      "name": "Red Hen",
+      "description": "Referenced as a previous hit from Mike Friedman, noted as part of his track record of restaurants.",
+      "cuisine_type": "Italian / American",
+      "price_range": "",
+      "booking_website": ""
+    },
+    {
+      "name": "All-Purpose",
+      "description": "Mentioned as another Friedman project; known for pizza and Italian-American offerings.",
+      "cuisine_type": "Italian / Pizza",
+      "price_range": "$$",
+      "booking_website": ""
+    },
+    {
+      "name": "Cielo Rojo",
+      "description": "Takoma Park favorite offering vegan-friendly, nixtamal tortilla\u2013forward Mexican fare including sophisticated tacos, tostadas, enchiladas, inventive margaritas, and a weekend brunch.",
+      "cuisine_type": "Mexican (Vegan-friendly)",
+      "price_range": "$",
+      "booking_website": "https://www.cielo-rojo.com/"
+    },
+    {
+      "name": "San Pancho Burritos",
+      "description": "A San Francisco\u2013styled burrito concept that took over Cielo Rojo's old space; noted as the team's casual outpost.",
+      "cuisine_type": "Mexican / Burritos",
+      "price_range": "$",
+      "booking_website": ""
+    },
+    {
+      "name": "2Fifty Texas BBQ",
+      "description": "Riverdale Park barbecue institution known for Central Texas oak-smoked brisket, beef ribs, pulled pork, and creative daily specials; expanded into Mt. Vernon Triangle.",
+      "cuisine_type": "Barbecue (Texas-style)",
+      "price_range": "$",
+      "booking_website": "http://www.2fiftybbq.com/"
+    },
+    {
+      "name": "Thip Khao",
+      "description": "Columbia Heights Laotian standard-bearer from mother-and-son chefs serving fiery Lao dishes like tamarind-glazed wings, grilled pork shoulder with lemongrass, and papaya salad.",
+      "cuisine_type": "Laotian",
+      "price_range": "$$",
+      "booking_website": "http://www.thipkhao.com/"
+    },
+    {
+      "name": "Baan Mae",
+      "description": "A modern Southeast Asian eatery by the Thip Khao team, converted from their former cocktail bar Hanumanh, noted for pop-ups and casual brunch bowls.",
+      "cuisine_type": "Southeast Asian",
+      "price_range": "$$",
+      "booking_website": "https://www.baanmaedc.com/"
+    },
+    {
+      "name": "Padaek",
+      "description": "A Northern Virginia Laotian staple from the Thip Khao family that moved to a new Arlington home.",
+      "cuisine_type": "Laotian",
+      "price_range": "$$",
+      "booking_website": ""
+    },
+    {
+      "name": "Purple Patch",
+      "description": "Mount Pleasant institution and local Filipino restaurant celebrated for sisig, longanisa, tocino, vegetarian adobos, and ube desserts; owner also opened Joia Burger.",
+      "cuisine_type": "Filipino",
+      "price_range": "$$",
+      "booking_website": "http://www.purplepatchdc.com/"
+    },
+    {
+      "name": "Joia Burger",
+      "description": "Casual burger shop from Purple Patch's owner serving wagyu smash burgers, housemade bean burgers, and ube soft serve.",
+      "cuisine_type": "Burgers / American",
+      "price_range": "$$",
+      "booking_website": "https://www.joiaburgerdc.com/"
+    },
+    {
+      "name": "Perry's Restaurant",
+      "description": "Adams Morgan spot known for sushi and Japanese small plates under chef Masako Morishita, offering drag brunch and special Japanese breakfast services.",
+      "cuisine_type": "Japanese / Sushi",
+      "price_range": "$$$",
+      "booking_website": "https://www.perrysam.com/"
+    },
+    {
+      "name": "Elmina",
+      "description": "Eric Adjepong's modern brick-and-mortar spot showcasing Ghanaian and West African dishes like fufu, kelewele, egusi hummus, roti, and doubles in a two-story 14th Street dining room.",
+      "cuisine_type": "Ghanaian / West African",
+      "price_range": "$$",
+      "booking_website": "https://www.elminarestaurant.com/"
+    },
+    {
+      "name": "Dawa",
+      "description": "A casual West African takeout counter operating inside Elmina offering approachable versions of Adjepong\u2019s flavors.",
+      "cuisine_type": "West African (Takeout)",
+      "price_range": "$",
+      "booking_website": "https://www.dawakitchen.com/"
+    },
+    {
+      "name": "Ceibo",
+      "description": "Adams Morgan candle-lit restaurant from brothers Juan and Manuel Olivera celebrating Uruguay and South American asado with grilled meats, seafood, and a dimly lit downstairs bar.",
+      "cuisine_type": "Uruguayan / South American",
+      "price_range": "$$",
+      "booking_website": "https://ceibodc.com/"
+    },
+    {
+      "name": "Bresca",
+      "description": "Buzzy bistro on lower 14th Street from chef Ryan Ratino offering inventive seasonal dishes, a well-regarded bar program, and chef\u2019s tasting menus; sibling to two-Michelin-starred J\u00f4nt.",
+      "cuisine_type": "Contemporary American / Bistro",
+      "price_range": "$$$",
+      "booking_website": "http://www.brescadc.com/"
+    },
+    {
+      "name": "J\u00f4nt",
+      "description": "Two-Michelin-starred tasting room located above Bresca, noted for its formal tasting menu experiences.",
+      "cuisine_type": "Fine dining / Tasting menu",
+      "price_range": "$$$$",
+      "booking_website": ""
+    },
+    {
+      "name": "\u00d4mo by J\u00f4nt",
+      "description": "A related project to J\u00f4nt referenced in coverage of Bresca\u2019s team, noted as part of the group's broader fine-dining ventures.",
+      "cuisine_type": "Fine dining / Tasting menu",
+      "price_range": "$$$$",
+      "booking_website": ""
+    },
+    {
+      "name": "Anju",
+      "description": "Korean bar-food restaurant between Dupont Circle and Adams Morgan serving mandu, gochujang-glazed fried chicken, bokkeumbap, and weekend brunch items like a galbi smash burger.",
+      "cuisine_type": "Korean",
+      "price_range": "$$$",
+      "booking_website": "https://www.anjurestaurant.com/"
+    },
+    {
+      "name": "Chiko",
+      "description": "The casual hit restaurant from the same group as Anju, noted for reviving an experimental tasting menu at its Capitol Hill flagship.",
+      "cuisine_type": "Korean / Modern",
+      "price_range": "$$",
+      "booking_website": "https://www.mychiko.com/"
+    },
+    {
+      "name": "Joon",
+      "description": "Tysons Corner restaurant earning national acclaim for upscale Iranian/Persian cuisine with inventive dishes like pistachio soup and braised lamb shoulder, plus an adjacent lounge called May Bar.",
+      "cuisine_type": "Iranian / Persian",
+      "price_range": "$$$$",
+      "booking_website": "http://eatjoon.com/"
+    },
+    {
+      "name": "May Bar",
+      "description": "A beautiful lounge in front of Joon\u2019s royal blue dining room where diners enjoy cocktails infused with Persian flavors.",
+      "cuisine_type": "Cocktail bar",
+      "price_range": "$$",
+      "booking_website": ""
+    },
+    {
+      "name": "SURA Restaurant",
+      "description": "Family-run underground Dupont lounge serving bold Thai dishes and experimental items like Parmesan-dusted egg noodles and khao soi from a red-lit bar and 50-seat lair.",
+      "cuisine_type": "Thai",
+      "price_range": "$$",
+      "booking_website": "http://www.suradc.com/"
+    },
+    {
+      "name": "Mayuree Thai Tavern",
+      "description": "Baltimore Thai restaurant mentioned in relation to SURA\u2019s beverage team, noted for its proprietor Andy Thammasathiti.",
+      "cuisine_type": "Thai",
+      "price_range": "",
+      "booking_website": "https://www.mayureethai.com/"
+    },
+    {
+      "name": "Fat Nomads",
+      "description": "A supper-club project referenced as contributing destination dishes to SURA; cited in background about the team's contributors.",
+      "cuisine_type": "Supper club / Pop-up",
+      "price_range": "",
+      "booking_website": ""
+    },
+    {
+      "name": "Amparo Fondita",
+      "description": "Dupont restaurant from chef Christian Irabi\u00e9n offering modern Mexican coastal flavors, seafood-forward dishes, masa cakes, and multi-day mole negro preparations.",
+      "cuisine_type": "Mexican (Modern)",
+      "price_range": "$$",
+      "booking_website": "https://amparofondita.com/"
+    },
+    {
+      "name": "Oyster Oyster",
+      "description": "Shaw-based vegetable-focused restaurant from chef Rob Rubba offering vegetarian and vegan tasting menus, honored with a Michelin star and a Michelin Green Star for sustainability.",
+      "cuisine_type": "Vegetarian / New American (Tasting menu)",
+      "price_range": "$$$",
+      "booking_website": "http://www.oysteroysterdc.com/"
+    },
+    {
+      "name": "Shia",
+      "description": "A nonprofit hidden tasting-menu restaurant from chef Edward Lee offering cutting-edge Korean tasting menus with sustainable practices and both five- and seven-course options.",
+      "cuisine_type": "Korean (Tasting menu)",
+      "price_range": "$$$$",
+      "booking_website": "https://shiarestaurant.org"
+    },
+    {
+      "name": "Tabard Inn",
+      "description": "Century-old boutique hotel hideaway in Dupont with French-Southern\u2013influenced dining overseen by executive chef Matthew Zafrir, serving crab fritters, local oysters, and seasonal vegetable-forward fare.",
+      "cuisine_type": "American / Hotel dining",
+      "price_range": "$$",
+      "booking_website": "https://www.tabardinn.com/"
+    },
+    {
+      "name": "Causa",
+      "description": "Fine-dining Peruvian restaurant in Blagden Alley offering a six-course prix fixe that explores Peru\u2019s coastal and Andean bounty; run by chef Carlos Delgado.",
+      "cuisine_type": "Peruvian (Fine dining)",
+      "price_range": "$$$$",
+      "booking_website": "http://causadc.com/"
+    },
+    {
+      "name": "Amazonia",
+      "description": "The colorful, more casual counterpart to Causa with a tropical-themed atmosphere, casual skewers, and a leafy patio that starts service earlier on weekends.",
+      "cuisine_type": "Peruvian / Casual",
+      "price_range": "$",
+      "booking_website": ""
+    },
+    {
+      "name": "Unconventional Diner",
+      "description": "Convention-center\u2013adjacent spot applying classic French technique to diner dishes, offering everything from chicken and waffles to mini-pot pie poppers and a bright bar.",
+      "cuisine_type": "American (Diner / Modern)",
+      "price_range": "$$",
+      "booking_website": "http://unconventionaldiner.com/"
+    },
+    {
+      "name": "L\u2019Ardente",
+      "description": "Mentioned as a next-door downtown sibling to Unconventional Diner, an Italian concept for diners seeking refined Italian options.",
+      "cuisine_type": "Italian",
+      "price_range": "$$",
+      "booking_website": "https://www.lardente.com/"
+    },
+    {
+      "name": "Love, Makoto",
+      "description": "Japanese dining sibling to Unconventional Diner cited as part of the same downtown group.",
+      "cuisine_type": "Japanese",
+      "price_range": "$$",
+      "booking_website": "https://www.lovemakoto.com/"
+    },
+    {
+      "name": "L\u2019Avant-Garde",
+      "description": "Georgetown French Riviera\u2013inspired showpiece offering saffron bouillabaisse, branzino, filet mignon, and theatrical lobster tasting menus under chef S\u00e9bastien Giannini.",
+      "cuisine_type": "French",
+      "price_range": "$$$",
+      "booking_website": "http://www.lavantgardedc.com/"
+    },
+    {
+      "name": "L\u2019Annexe",
+      "description": "A sibling cocktail bar to L\u2019Avant-Garde recommended for nightcaps, with a petite patio.",
+      "cuisine_type": "Cocktail bar / French-style",
+      "price_range": "$$",
+      "booking_website": "https://www.lannexe-bar.com/"
+    },
+    {
+      "name": "Kyojin Sushi",
+      "description": "Georgetown sushi cave from the Yume Sushi team featuring adventurous offerings like truffle wasabi, monkfish liver, uni with torched wagyu, and hot izakaya items.",
+      "cuisine_type": "Japanese / Sushi",
+      "price_range": "$$",
+      "booking_website": "https://www.kyojindc.com/"
+    },
+    {
+      "name": "Yume Sushi",
+      "description": "Outer Arlington raw fish hit from the team behind Kyojin Sushi, cited as the group's original restaurant.",
+      "cuisine_type": "Japanese / Sushi",
+      "price_range": "$$",
+      "booking_website": ""
+    },
+    {
+      "name": "Rimtang",
+      "description": "Fast-casual Thai street food concept opened by Kyojin\u2019s chef, showcasing family Thai recipes in a quick-service format.",
+      "cuisine_type": "Thai / Street food",
+      "price_range": "$",
+      "booking_website": "https://www.rimtangdc.com/"
+    },
+    {
+      "name": "Imperfecto",
+      "description": "Enrique Limardo\u2019s Mediterranean-Latin fine-dining restaurant in the West End serving surreal plating, wood-fired items, and an omakase tasting experience at the chef\u2019s counter.",
+      "cuisine_type": "Mediterranean-Latin / Fine dining",
+      "price_range": "$$$$",
+      "booking_website": "http://www.imperfectodc.com/"
+    },
+    {
+      "name": "Seven Reasons",
+      "description": "Referenced as Elmina\u2019s former 14th Street home and the team\u2019s previous tropically appointed concept.",
+      "cuisine_type": "Cocktail bar / Restaurant",
+      "price_range": "",
+      "booking_website": "https://www.sevenreasonsdc.com/"
+    },
+    {
+      "name": "TheSaga",
+      "description": "Spanish-themed restaurant from Enrique Limardo opened in the Ritz-Carlton and mentioned as part of his expanding portfolio.",
+      "cuisine_type": "Spanish",
+      "price_range": "$$$",
+      "booking_website": ""
+    },
+    {
+      "name": "Surreal",
+      "description": "An avant-garde bistro by Limardo located near Amazon HQ2 in Arlington, cited as part of his expansion into Virginia.",
+      "cuisine_type": "Modern / Avant-garde",
+      "price_range": "$$$",
+      "booking_website": ""
+    },
+    {
+      "name": "Casa Teresa",
+      "description": "Rub\u00e9n Garc\u00eda\u2019s flagship Spanish tapas and live-fire restaurant at The Square, serving family-style grilled meats, whole fish, and Catalan/Basque\u2013inspired dishes.",
+      "cuisine_type": "Spanish / Tapas",
+      "price_range": "$$$",
+      "booking_website": "https://teresadc.com/"
+    },
+    {
+      "name": "Cucina Morini",
+      "description": "Southern Italian restaurant in Mt. Vernon Triangle serving crudo, small plates, fish soup, and homemade pastas, part of the Altamarea Group.",
+      "cuisine_type": "Italian (Southern)",
+      "price_range": "$$",
+      "booking_website": "https://www.cucinamorini.com/location/cucina-morini/"
+    },
+    {
+      "name": "Osteria Morini",
+      "description": "The decade-old NYC sibling to Cucina Morini referenced as part of the larger Morini family of restaurants.",
+      "cuisine_type": "Italian",
+      "price_range": "$$",
+      "booking_website": "https://osteriamorini.com/washington-dc/"
+    },
+    {
+      "name": "Caruso\u2019s Grocery",
+      "description": "Capitol Hill\u2013born hit and part of the team roster mentioned in Cucina Morini coverage; known for Italian deli-style offerings.",
+      "cuisine_type": "Italian / Grocery",
+      "price_range": "$$",
+      "booking_website": "https://www.carusosgrocery.com/"
+    },
+    {
+      "name": "Nicoletta Italian Kitchen",
+      "description": "A former Italian concept combined into the new Cucina Morini location; referenced as part of building the new Italian spot.",
+      "cuisine_type": "Italian",
+      "price_range": "$$",
+      "booking_website": ""
+    },
+    {
+      "name": "Brew\u2019d cafe",
+      "description": "An adjoining cafe that was incorporated into the Cucina Morini project as part of the Navy Yard concept.",
+      "cuisine_type": "Cafe",
+      "price_range": "$",
+      "booking_website": ""
+    },
+    {
+      "name": "Baan Siam",
+      "description": "Roomy Mt. Vernon Triangle Thai restaurant from chef Jeeraporn Poksupthon offering khao soi, tapioca skin dumplings, spicy-sweet salads, and Thai desserts like mango sticky rice.",
+      "cuisine_type": "Thai",
+      "price_range": "$$",
+      "booking_website": "http://www.baansiamdc.com/"
+    },
+    {
+      "name": "Tapori",
+      "description": "H Street South Indian/Nepalese restaurant from the Daru team focused on street-food favorites like pani puri, vada pav, dosas, and spiced cocktails.",
+      "cuisine_type": "South Indian / Nepalese (Street food)",
+      "price_range": "$$",
+      "booking_website": "https://taporidc.com"
+    },
+    {
+      "name": "Daru",
+      "description": "Critically acclaimed H Street restaurant whose team opened Tapori; referenced as part of the same restaurant family.",
+      "cuisine_type": "Indian / South Asian",
+      "price_range": "$$",
+      "booking_website": "https://www.darudc.com/"
+    },
+    {
+      "name": "Centrolina",
+      "description": "Amy Brandwein\u2019s polished osteria in CityCenter DC highlighting seasonal Italian dishes, pristine pastas, wood-fired mains, and refined desserts.",
+      "cuisine_type": "Italian (Osteria)",
+      "price_range": "$$",
+      "booking_website": "http://www.centrolinadc.com/"
+    },
+    {
+      "name": "Piccolina",
+      "description": "Amy Brandwein\u2019s all-day sibling cafe to Centrolina, offering casual cafe fare across the street.",
+      "cuisine_type": "Cafe / Italian",
+      "price_range": "$",
+      "booking_website": "https://www.piccolinadc.com/"
+    },
+    {
+      "name": "Tonari",
+      "description": "Katsuya Fukushima\u2019s wafu restaurant in Chinatown that fuses Japanese flavors into pizza and pasta, with thick square pies and inventive toppings.",
+      "cuisine_type": "Japanese-Italian (Wafu)",
+      "price_range": "$$",
+      "booking_website": "https://www.tonaridc.com/"
+    },
+    {
+      "name": "Izakaya Daikaya",
+      "description": "Neighboring ramen shop and izakaya by the same ownership as Tonari, cited as part of the local restaurant cluster.",
+      "cuisine_type": "Japanese (Izakaya / Ramen)",
+      "price_range": "$$",
+      "booking_website": ""
+    },
+    {
+      "name": "Bantam King",
+      "description": "Chicken ramen haunt mentioned as another concept owned by the Tonari team.",
+      "cuisine_type": "Ramen / Japanese",
+      "price_range": "$",
+      "booking_website": ""
+    },
+    {
+      "name": "Moon Rabbit by Kevin Tien",
+      "description": "Fine-dining Vietnamese restaurant in Penn Quarter from James Beard\u2013nominated chef Kevin Tien, featuring contemporary Vietnamese dishes and acclaimed breads and pastries.",
+      "cuisine_type": "Vietnamese (Fine dining)",
+      "price_range": "$$$",
+      "booking_website": "https://www.exploretock.com/moonrabbitbykevintien/"
+    },
+    {
+      "name": "The Occidental",
+      "description": "Stephen Starr\u2019s reimagining of a downtown classic near the White House offering white-tablecloth service, tableside martinis, prime rib, lamb chops, caviar, and Champagne.",
+      "cuisine_type": "American (Classic / Steakhouse-style)",
+      "price_range": "$$$",
+      "booking_website": "https://theoccidentaldc.com/"
+    },
+    {
+      "name": "Pascual",
+      "description": "Capitol Hill hearth-focused Mexican restaurant from Isabel Coss and Matt Conroy, highlighting whole grilled fish, smoked chicken, tamales, and Oaxacan flavors.",
+      "cuisine_type": "Mexican (Contemporary)",
+      "price_range": "$$$$",
+      "booking_website": "https://www.pascualdc.com/"
+    },
+    {
+      "name": "SER Restaurant",
+      "description": "Ten-year-old Spanish stalwart in Ballston serving tapas, paella for two, and seasonal Spanish plates with a lively patio.",
+      "cuisine_type": "Spanish / Tapas",
+      "price_range": "$$",
+      "booking_website": "http://www.serrestaurant.com/"
+    },
+    {
+      "name": "Joselito",
+      "description": "Referenced as SER\u2019s sister spot in Capitol Hill that recently closed; noted in relation to SER\u2019s team focus.",
+      "cuisine_type": "Spanish",
+      "price_range": "",
+      "booking_website": ""
+    },
+    {
+      "name": "D\u014dgon",
+      "description": "Afro-Caribbean restaurant by celebrity chef Kwame Onwuachi at the Salamander Washington DC exploring Nigerian, Jamaican, Trinidadian, and Creole heritage with dishes like plantain hoe cakes and jollof rice.",
+      "cuisine_type": "Afro-Caribbean",
+      "price_range": "$$$",
+      "booking_website": "http://www.dogondc.com/"
+    },
+    {
+      "name": "Ama",
+      "description": "Navy Yard Italian caff\u00e8 and focacceria by Micah Wilder and Johanna Hellrigl that transitions from morning pastries and coffee to an aperitivo bar and Italian dinners.",
+      "cuisine_type": "Italian (Caff\u00e8 / Osteria)",
+      "price_range": "$$",
+      "booking_website": "https://www.amarestaurant.bar/"
+    },
+    {
+      "name": "Fish Shop",
+      "description": "UK seafood concept that opened at the Wharf offering a fishmonger-style menu with crab-topped crumpets, grilled oysters, roasted rockfish, and produce sourced locally.",
+      "cuisine_type": "Seafood",
+      "price_range": "$$$",
+      "booking_website": "https://fishshopdc.com"
+    },
+    {
+      "name": "Albi",
+      "description": "High-end Palestinian restaurant from James Beard Award winner Michael Rafidi centered on wood-burning hearth cooking, mezze, and a new Sofra tasting menu.",
+      "cuisine_type": "Levantine / Palestinian",
+      "price_range": "$$$",
+      "booking_website": "http://www.albidc.com/"
+    },
+    {
+      "name": "Yellow",
+      "description": "Sibling cafe to Albi offering a more casual Levantine cafe experience, noted for expanding to Georgetown and Union Market.",
+      "cuisine_type": "Levantine / Cafe",
+      "price_range": "$",
+      "booking_website": ""
+    },
+    {
+      "name": "La\u2019 Shukran",
+      "description": "Lev antine bar above Albi\u2019s Union Market location described as a lively Levantine bar experience.",
+      "cuisine_type": "Levantine / Bar",
+      "price_range": "$$",
+      "booking_website": ""
+    },
+    {
+      "name": "Shilling Canning Company",
+      "description": "Navy Yard restaurant and raw bar from chef Reid Shilling focused on mid-Atlantic ingredients, seasonal tasting menus, and preservation techniques.",
+      "cuisine_type": "New American / Seafood",
+      "price_range": "$$",
+      "booking_website": "http://www.shillingcanning.com/"
+    },
+    {
+      "name": "Fancy Ranch",
+      "description": "The team\u2019s Amish chicken pop-up in Union Market mentioned as a rotating concept associated with Shilling Canning Company.",
+      "cuisine_type": "Pop-up / Rotisserie",
+      "price_range": "",
+      "booking_website": "https://www.fancyranchdc.com/"
+    },
+    {
+      "name": "Mama Chang",
+      "description": "Home-style Chinese restaurant in Peter Chang\u2019s portfolio serving Hubei-inspired numbing spice dishes, dim sum, and family-style plates; with a Fairfax dining room.",
+      "cuisine_type": "Chinese (Hubei / Sichuan-influenced)",
+      "price_range": "$$",
+      "booking_website": "https://www.mamachangva.com/"
+    },
+    {
+      "name": "Chang Chang",
+      "description": "Peter Chang\u2019s Dupont Circle restaurant referenced as his first D.C. location with an extensive menu and supersized offerings.",
+      "cuisine_type": "Sichuan / Chinese",
+      "price_range": "$$",
+      "booking_website": ""
+    },
+    {
+      "name": "NiHao",
+      "description": "A National Landing Chinese concept from Peter Chang\u2019s expanding portfolio mentioned as part of his 2024 openings in NoVa.",
+      "cuisine_type": "Chinese",
+      "price_range": "$$",
+      "booking_website": ""
+    },
+    {
+      "name": "Estadio",
+      "description": "A restaurant referenced as a partner to Rob Rubba when discussing Oyster Oyster; cited in relation to ownership and hospitality partnerships.",
+      "cuisine_type": "Spanish / Tapas",
+      "price_range": "$$",
+      "booking_website": ""
+    },
+    {
+      "name": "L2 lounge",
+      "description": "Referenced as the former occupant of the space Kyojin Sushi later took over; cited as a prior local lounge tenant.",
+      "cuisine_type": "Lounge / Bar",
+      "price_range": "",
+      "booking_website": ""
+    },
+    {
+      "name": "Kintaro",
+      "description": "Former tenant of a nearby Georgetown space mentioned in relation to Rimtang\u2019s opening.",
+      "cuisine_type": "Japanese",
+      "price_range": "",
+      "booking_website": ""
+    },
+    {
+      "name": "Patsy\u2019s",
+      "description": "Referenced as a nearby place in the Joon section noting free self-parking in the lot in front of Patsy\u2019s.",
+      "cuisine_type": "Restaurant (unspecified)",
+      "price_range": "",
+      "booking_website": ""
+    },
+    {
+      "name": "Maison Bar a Vin (Maison DC)",
+      "description": "A wine- and bar-focused concept mentioned as part of the Popal Group\u2019s neighborhood openings alongside Lut\u00e8ce and Lapis.",
+      "cuisine_type": "Wine bar / French",
+      "price_range": "$$",
+      "booking_website": "https://www.maisondc.com/"
+    },
+    {
+      "name": "Lut\u00e8ce",
+      "description": "Mentioned as a French Georgetown gem from the Popal Group, cited in the context of neighborhood restaurants they operate.",
+      "cuisine_type": "French",
+      "price_range": "$$$",
+      "booking_website": ""
+    },
+    {
+      "name": "Lapis",
+      "description": "Adams Morgan Afghan restaurant from the Popal Group referenced as one of the group's neighborhood restaurants.",
+      "cuisine_type": "Afghan",
+      "price_range": "$$",
+      "booking_website": ""
+    }
+  ]
+}

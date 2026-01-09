@@ -1,0 +1,47 @@
+# Restaurant Source Configuration
+#
+# This file defines the authoritative sources for restaurant discovery.
+# Edit this file to add new sources, URLs, or search queries without
+# modifying Python code.
+
+# Known high-value URLs to extract directly
+# These are authoritative lists that we want to guarantee we capture
+known_urls:
+  Eater DC:
+    - https://dc.eater.com/maps/best-new-restaurants-heatmap-dc
+    - https://dc.eater.com/maps/dc-best-restaurants-38  # Essential 38
+
+  Infatuation:
+    - https://www.theinfatuation.com/washington-dc/guides/best-new-washington-dc-restaurants-hit-list
+
+# Deep crawl sources - list pages where we need to follow links to individual restaurant pages
+# These require crawling to discover restaurant URLs, then extracting from each
+deep_crawl_sources:
+  Michelin Guide:
+    list_url: https://guide.michelin.com/us/en/district-of-columbia/washington-dc/restaurants/1-star-michelin/2-stars-michelin/bib-gourmand
+    # Regex pattern to match individual restaurant page URLs
+    restaurant_url_pattern: "/us/en/.*/restaurant/.*"
+    # Max restaurants to extract (to control API costs)
+    max_restaurants: 70
+
+# Source-specific search queries
+# Queries tailored to match how each source titles their content
+search_queries:
+  Washington Post Food:
+    - Washington Post best new restaurants DC
+    - Washington Post restaurant reviews three four stars
+
+  Washingtonian Magazine:
+    - washingtonian best new restaurants
+
+  Infatuation:
+    - Infatuation best restaurants DC
+    - Infatuation new restaurants Washington DC
+
+# Source domain mappings for filtering search results
+source_domains:
+  Eater DC: dc.eater.com
+  Michelin Guide: guide.michelin.com
+  Washington Post Food: washingtonpost.com
+  Washingtonian Magazine: washingtonian.com
+  Infatuation: theinfatuation.com

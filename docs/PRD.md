@@ -62,48 +62,55 @@ An AI-powered reservation agent that discovers upscale DC-area restaurants, main
 ### 4.1 Restaurant Discovery Engine
 
 **FR-1.1: Web Search for New Restaurants**
+- Use Tavily AI for web search and browsing
 - Search authoritative DC-area restaurant sources:
-  - Eater DC, especially the "Hot" restaurants
+  - Eater DC
+  - Michelin Guide
   - Washington Post Food section
-  - Washingtonian magazine
-  - Other credible publications (e.g. Time Out)
+  - Washingtonian Magazine
+  - Infatuation
 - Filter criteria:
-  - Location matches `.env` preferences
-  - Upscale/fine dining
-  - Interesting and high-quality food
-  - Price range bounds of $$-$$$$ on typical scales
-  - EXCLUDE: Fast-casual, cheap restaurants, chains
+  - Location: Within `LOCATION_CITY`
+  - Only search web pages from authoritative sources
+  - Only include restaurants mentioned in an article or web page on the source in the past year
 
 **FR-1.2: Restaurant Evaluation Criteria**
-- Priority 1: "hot" or "trending" restaurant lists from sources
-- Priority 2: great customer reviews on Yelp
-- Priority 3: Nice environment/ambience
-- Priority 4: a great cocktail/wine list
-- Priority 5: Restaurants within limits of city in location preferences, even if search radius includes a broader area
+- Create a separate ranking from 1.0-5.0 for each authoritative source
+- Most importantly, PRIORITIZE restaurants on ranked or ordered lists from authoritative sources
+- Secondly, PRIORITIZE restaurants based on the category of the list (e.g., Washington Post and Michelin Guide star ratings)
+- Thirdly, prioritize based on qualitative descriptions in the sources, judging restaurants in this order:
+  1. High quality of food
+  2. Innovation or "new"-ness of the cuisine
+  3. Quality of the cocktail list
+  4. Quality of the ambience
+  5. Quality of the service
 
-**FR-1.3: Priority Rank**
-- For restaurants that meet the filter criteria, please assign a rank of "Top", "Great", "Good", "Medium", or "Low" based on the criteria
+**FR-1.3: Overall Priority Rank**
+- For each restaurant, create an overall ranking (1.0-5.0 float) based on the average of all source rankings
+- Ignore sources that do not have a ranking for a particular restaurant
+- Include priority reasons (1-3 sentences) explaining the qualitative reasons for the ranking
 
 ### 4.2 Restaurant List Management
 
-**FR-2.1: Google Sheet Set-Up **
-
-
-**FR-2.1: Google Sheets **
+**FR-2.1: Google Sheets Schema**
 - Maintain restaurant list in Google Sheets with fields:
   - Restaurant Name
-  - Booking website
+  - Booking Website
   - Brief Description
-  - Yelp Review Average
-  - Recommendation Source
+  - Priority Reasons
   - Price Range
   - Cuisine Type
-  - Priority Rank
+  - Eater DC Rank (1.0-5.0, 0.0 if not ranked)
+  - Michelin Guide Rank (1.0-5.0, 0.0 if not ranked)
+  - Washington Post Rank (1.0-5.0, 0.0 if not ranked)
+  - Washingtonian Rank (1.0-5.0, 0.0 if not ranked)
+  - Infatuation Rank (1.0-5.0, 0.0 if not ranked)
+  - Overall Priority Rank (average of source rankings)
   - Date Added
 
 **FR-2.2: Google Sheet Update Workflow**
 - Compare discovery results against existing list
-- Surface additions and removals to user for confirmation. For additions, please surface the restuarant name, priority rank, Yelp review avg, and brief description.
+- Surface additions and removals to user for confirmation. For additions, please surface the restaurant name, brief description, overall priority rank, and priority reasons.
 - Only apply changes after user approval
 - Support conversational editing (add/remove/update restaurants via chat)
 
@@ -197,13 +204,13 @@ Backend technical details:
 ### 6.3 External Integrations
 - **Required:**
   - Google Sheets API
-  - Web search and scraping tool for Restaurant searches
+  - Tavily AI for web search and browsing
   - Different integrations are needed for OpenTable, Resy, and Tock
   - OpenTable use API
 
 ### 6.4 AI/LLM Integration
 - Use LangGraph for the agent framework
-- Use gpt-5-mini for LLM in LangGraph
+- Use OpenAI gpt-5-mini for LLM in LangGraph
 - Create two different graphs: one for the restaurant research and list management, and another for the reservation booking
 
 ---
@@ -226,8 +233,6 @@ Backend technical details:
 - Activity planning beyond dining
 - Group reservations (larger parties)
 - Multi-city support (DC only for now)
-- Budget/cheap restaurants
-- Fast-casual dining
 - Food delivery services
 
 ---

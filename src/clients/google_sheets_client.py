@@ -35,28 +35,36 @@ class GoogleSheetsClient:
     in the "Date Night Restaurant List" spreadsheet.
     """
 
-    # Column mapping based on FR-2.1 requirements
+    # Column mapping based on RestaurantListAgent.md specification
     COLUMNS = {
-        'restaurant_name': 'A',
+        'name': 'A',
         'booking_website': 'B',
-        'brief_description': 'C',
-        'yelp_review_avg': 'D',
-        'recommendation_source': 'E',
-        'price_range': 'F',
-        'cuisine_type': 'G',
-        'priority_rank': 'H',
-        'date_added': 'I'
+        'description': 'C',
+        'priority_reasons': 'D',
+        'price_range': 'E',
+        'cuisine_type': 'F',
+        'eater_dc_rank': 'G',
+        'michelin_guide_rank': 'H',
+        'washington_post_rank': 'I',
+        'washingtonian_rank': 'J',
+        'infatuation_rank': 'K',
+        'priority_rank': 'L',
+        'date_added': 'M'
     }
 
     HEADER_ROW = [
         'Restaurant Name',
         'Booking Website',
         'Brief Description',
-        'Yelp Review Average',
-        'Recommendation Source',
+        'Priority Reasons',
         'Price Range',
         'Cuisine Type',
-        'Priority Rank',
+        'Eater DC Rank',
+        'Michelin Guide Rank',
+        'Washington Post Rank',
+        'Washingtonian Rank',
+        'Infatuation Rank',
+        'Overall Priority Rank',
         'Date Added'
     ]
 
@@ -127,14 +135,18 @@ class GoogleSheetsClient:
 
         Returns:
             List of dictionaries, each containing restaurant data with keys:
-            - restaurant_name
+            - name
             - booking_website
-            - brief_description
-            - yelp_review_avg
-            - recommendation_source
+            - description
+            - priority_reasons
             - price_range
             - cuisine_type
-            - priority_rank
+            - eater_dc_rank (float)
+            - michelin_guide_rank (float)
+            - washington_post_rank (float)
+            - washingtonian_rank (float)
+            - infatuation_rank (float)
+            - priority_rank (float)
             - date_added
 
         Raises:
@@ -142,7 +154,7 @@ class GoogleSheetsClient:
         """
         try:
             # Read from row 2 onwards (skip header)
-            range_name = f"{self.sheet_name}!A2:I"
+            range_name = f"{self.sheet_name}!A2:M"
 
             result = self.service.spreadsheets().values().get(
                 spreadsheetId=self.spreadsheet_id,
@@ -159,18 +171,22 @@ class GoogleSheetsClient:
             restaurants = []
             for row in values:
                 # Pad row with empty strings if columns are missing
-                row = row + [''] * (9 - len(row))
+                row = row + [''] * (13 - len(row))
 
                 restaurant = {
-                    'restaurant_name': row[0],
+                    'name': row[0],
                     'booking_website': row[1],
-                    'brief_description': row[2],
-                    'yelp_review_avg': row[3],
-                    'recommendation_source': row[4],
-                    'price_range': row[5],
-                    'cuisine_type': row[6],
-                    'priority_rank': row[7],
-                    'date_added': row[8]
+                    'description': row[2],
+                    'priority_reasons': row[3],
+                    'price_range': row[4],
+                    'cuisine_type': row[5],
+                    'eater_dc_rank': float(row[6]) if row[6] else 0.0,
+                    'michelin_guide_rank': float(row[7]) if row[7] else 0.0,
+                    'washington_post_rank': float(row[8]) if row[8] else 0.0,
+                    'washingtonian_rank': float(row[9]) if row[9] else 0.0,
+                    'infatuation_rank': float(row[10]) if row[10] else 0.0,
+                    'priority_rank': float(row[11]) if row[11] else 0.0,
+                    'date_added': row[12]
                 }
                 restaurants.append(restaurant)
 
@@ -187,40 +203,48 @@ class GoogleSheetsClient:
 
         Args:
             restaurant: Dictionary containing restaurant data with keys:
-                - restaurant_name (required)
+                - name (required)
                 - booking_website
-                - brief_description
-                - yelp_review_avg
-                - recommendation_source
+                - description
+                - priority_reasons
                 - price_range
                 - cuisine_type
-                - priority_rank
+                - eater_dc_rank (float)
+                - michelin_guide_rank (float)
+                - washington_post_rank (float)
+                - washingtonian_rank (float)
+                - infatuation_rank (float)
+                - priority_rank (float)
                 - date_added (auto-generated if not provided)
 
         Returns:
             True if successful, False otherwise
 
         Raises:
-            ValueError: If restaurant_name is missing
+            ValueError: If name is missing
             HttpError: If API request fails
         """
-        if not restaurant.get('restaurant_name'):
-            raise ValueError("restaurant_name is required")
+        if not restaurant.get('name'):
+            raise ValueError("name is required")
 
         # Auto-generate date_added if not provided
         if not restaurant.get('date_added'):
             restaurant['date_added'] = datetime.now().strftime('%Y-%m-%d')
 
-        # Build row data in correct column order
+        # Build row data in correct column order (13 columns)
         row = [
-            restaurant.get('restaurant_name', ''),
+            restaurant.get('name', ''),
             restaurant.get('booking_website', ''),
-            restaurant.get('brief_description', ''),
-            restaurant.get('yelp_review_avg', ''),
-            restaurant.get('recommendation_source', ''),
+            restaurant.get('description', ''),
+            restaurant.get('priority_reasons', ''),
             restaurant.get('price_range', ''),
             restaurant.get('cuisine_type', ''),
-            restaurant.get('priority_rank', ''),
+            restaurant.get('eater_dc_rank', 0.0),
+            restaurant.get('michelin_guide_rank', 0.0),
+            restaurant.get('washington_post_rank', 0.0),
+            restaurant.get('washingtonian_rank', 0.0),
+            restaurant.get('infatuation_rank', 0.0),
+            restaurant.get('priority_rank', 0.0),
             restaurant.get('date_added', '')
         ]
 
@@ -230,12 +254,12 @@ class GoogleSheetsClient:
 
             result = self.service.spreadsheets().values().append(
                 spreadsheetId=self.spreadsheet_id,
-                range=f"{self.sheet_name}!A:I",
+                range=f"{self.sheet_name}!A:M",
                 valueInputOption='USER_ENTERED',
                 body=body
             ).execute()
 
-            print(f"Added restaurant: {restaurant['restaurant_name']}")
+            print(f"Added restaurant: {restaurant['name']}")
             print(f"Updated cells: {result.get('updates').get('updatedCells')}")
             return True
 
@@ -267,14 +291,18 @@ class GoogleSheetsClient:
                 restaurant['date_added'] = datetime.now().strftime('%Y-%m-%d')
 
             row = [
-                restaurant.get('restaurant_name', ''),
+                restaurant.get('name', ''),
                 restaurant.get('booking_website', ''),
-                restaurant.get('brief_description', ''),
-                restaurant.get('yelp_review_avg', ''),
-                restaurant.get('recommendation_source', ''),
+                restaurant.get('description', ''),
+                restaurant.get('priority_reasons', ''),
                 restaurant.get('price_range', ''),
                 restaurant.get('cuisine_type', ''),
-                restaurant.get('priority_rank', ''),
+                restaurant.get('eater_dc_rank', 0.0),
+                restaurant.get('michelin_guide_rank', 0.0),
+                restaurant.get('washington_post_rank', 0.0),
+                restaurant.get('washingtonian_rank', 0.0),
+                restaurant.get('infatuation_rank', 0.0),
+                restaurant.get('priority_rank', 0.0),
                 restaurant.get('date_added', '')
             ]
             rows.append(row)
@@ -284,7 +312,7 @@ class GoogleSheetsClient:
 
             result = self.service.spreadsheets().values().append(
                 spreadsheetId=self.spreadsheet_id,
-                range=f"{self.sheet_name}!A:I",
+                range=f"{self.sheet_name}!A:M",
                 valueInputOption='USER_ENTERED',
                 body=body
             ).execute()
@@ -375,7 +403,7 @@ class GoogleSheetsClient:
             raise ValueError("row_number must be 2 or greater (row 1 is header)")
 
         try:
-            range_name = f"{self.sheet_name}!A{row_number}:I{row_number}"
+            range_name = f"{self.sheet_name}!A{row_number}:N{row_number}"
 
             result = self.service.spreadsheets().values().clear(
                 spreadsheetId=self.spreadsheet_id,
@@ -402,12 +430,12 @@ class GoogleSheetsClient:
             # Check if headers exist
             result = self.service.spreadsheets().values().get(
                 spreadsheetId=self.spreadsheet_id,
-                range=f"{self.sheet_name}!A1:I1"
+                range=f"{self.sheet_name}!A1:N1"
             ).execute()
 
             values = result.get('values', [])
 
-            if values and len(values[0]) == 9:
+            if values and len(values[0]) == 14:
                 print("Headers already exist")
                 return True
 
@@ -416,7 +444,7 @@ class GoogleSheetsClient:
 
             self.service.spreadsheets().values().update(
                 spreadsheetId=self.spreadsheet_id,
-                range=f"{self.sheet_name}!A1:I1",
+                range=f"{self.sheet_name}!A1:N1",
                 valueInputOption='RAW',
                 body=body
             ).execute()
