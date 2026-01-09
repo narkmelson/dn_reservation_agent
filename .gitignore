@@ -33,6 +33,7 @@ Thumbs.db
 *.db
 *.sqlite3
 logs/
+data/cache/
 
 # Testing
 .pytest_cache/
