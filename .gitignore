@@ -8,6 +8,9 @@ __pycache__/
 venv/
 ENV/
 env/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
 
 # Environment variables
 .env
@@ -44,3 +47,9 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+
+# Node.js / React (frontend)
+node_modules/
+npm-debug.log*
+.next/
+.nuxt/
